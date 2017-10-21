@@ -1,0 +1,16 @@
+- name: MongoDB is running
+  docker_container:
+#   restart_policy: always
+    name: mongodb
+    image: bitnami/mongodb:latest 
+    ports: 
+    - "27017:27017"
+    privileged: yes
+    env:
+#      MONGODB_USERNAME: ude
+#      MONGODB_PASSWORD: ude
+      MONGODB_DATABASE: ec
+    volumes:
+      - /data/mongodb:/bitnami/mongodb
+  when: not skip_ui is defined
+  tags: [mongodb]
