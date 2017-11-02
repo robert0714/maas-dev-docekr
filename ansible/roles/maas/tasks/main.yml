@@ -1,7 +1,7 @@
 # - name: console
 #   command: docker exec -it mysqldb  mysql -uroot   -Bse  "create user 'chain'@'%' identified by 'qazwsx' ;grant all on  *.* to 'chain'@'%' "; 
 #   register: console
-#   tags: [maas];
+#   tags: [maas]
 
 
 

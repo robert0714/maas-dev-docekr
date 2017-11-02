@@ -14,8 +14,7 @@ Vagrant.configure(2) do |config|
     d.vm.network "forwarded_port", guest: 3306, host: 3306
     d.vm.network "forwarded_port", guest: 9000, host: 9000
     d.vm.provision :shell, path: "scripts/bootstrap4Ubuntu_ansible.sh"
-    d.vm.provision :shell, inline: "PYTHONUNBUFFERED=1 ansible-playbook /vagrant/ansible/mysqldb.yml -c local"
-    d.vm.provision :shell, inline: "PYTHONUNBUFFERED=1 ansible-playbook /vagrant/ansible/mongodb.yml -c local"
+    d.vm.provision :shell, inline: "PYTHONUNBUFFERED=1 ansible-playbook /vagrant/ansible/maas.yml -c local"
     d.vm.provider "virtualbox" do |v|
       v.memory = 2048
     end
