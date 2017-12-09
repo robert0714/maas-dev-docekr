@@ -82,6 +82,7 @@
   user:
     name: vagrant
     group: docker
+    append: yes
   register: user_result
   tags: [docker]
 
