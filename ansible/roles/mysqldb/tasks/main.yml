@@ -40,7 +40,7 @@
      - "3306:3306"    
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /data/mysql:/var/lib/mysql
+      - /vagrant/data/mysql:/var/lib/mysql
       - /vagrant/.vagrant/machines:/machines
       - /etc/mysql/my55.cnf:/etc/my.cnf
       # - /root/.my.cnf:/root/.my.cnf
