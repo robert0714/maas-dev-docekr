@@ -32,7 +32,7 @@
       MYSQL_USER: ecuser
       MYSQL_PASSWORD: qazwsx
       EXTRA_OPTS: "--lower_case_table_names=1"
-    image: mysql/mysql-server:8
+    image: mysql/mysql-server:8.0
     name: mysqldb
     ports: 
      - "49160:22"
